@@ -1,0 +1,18 @@
+<input #newstock placeholder="New Stock">
+<button (click)="this.playerservice.addStock(newstock.value);newstock.value="">SEARCH</button>
+<h4>previous results</h4>
+<div>
+<table class="table">
+  <tr class="thead-dark">
+  <th>STOCK</th>
+  <th>VEG</th>
+  <th>DAY</th>
+  </tr>
+  <tr *ngFor="let user of playerservice.getveg()">
+    <td>{{user.stock}}</td>
+    <td>{{user.veg}}</td>
+    <td>{{user.day}}</td>
+  </tr>
+
+  </table>
+  </div>
